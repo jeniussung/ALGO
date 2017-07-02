@@ -7,8 +7,10 @@ int search(int *arr,int n);
 
 int main()
 {
+	int n;
 	int arr[11] = {0,1,5,8,9,10,17,17,20,24,30};
-	cout<<search(arr,7)<<endl;
+	cin>>n;
+	cout<<search(arr,n)<<endl;
 	return 0;
 }
 
@@ -24,7 +26,7 @@ int search(int * arr, int n)
 
 		for(int j = 1 ; j <= i ; j++)
 		{
-			q = max(q,arr[j]+sol[i-j]);
+			q = max(q,arr[i-j]+sol[j]);
 			result = max(q,result);		
 		}
 
